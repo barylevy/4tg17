@@ -8,7 +8,6 @@
 
 import UIKit
 import MapKit
-import NMAKit
 
 class MapVC: UIViewController {
 
@@ -17,7 +16,7 @@ class MapVC: UIViewController {
     @IBOutlet var errorMessageLabel: UILabel!
 
     var mapObjectsArray = [MKPointAnnotation]()
-    var resultsArray: [NMALink] = []{
+    var places: [PlaceData] = []{
         didSet{
             self.reloadMapObjects()
         }

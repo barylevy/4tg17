@@ -7,11 +7,10 @@
 //
 
 import Foundation
-import NMAKit
 
 class CategoriesList {
     var states = [String: Bool]()
-    var placeCategory = [NMACategory]()
+    var placeCategory = [CategoryData]()
 
     func rebuild()  {
         for uid in placeCategory {
@@ -19,7 +18,6 @@ class CategoriesList {
         }
     }
     func includedCategories() -> [String]  {
-//        let filter = [MNAC]()
         let list = self.placeCategory.filter { (category) -> Bool in
             self.states[category.uniqueId] ?? true
             }.map({$0.uniqueId})

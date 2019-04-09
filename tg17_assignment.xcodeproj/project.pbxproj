@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		741267D5225CEAA50069DF68 /* NMAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 741267D4225CEAA50069DF68 /* NMAKit.framework */; };
 		741267D6225CEAA50069DF68 /* NMAKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 741267D4225CEAA50069DF68 /* NMAKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		741267D9225CF2310069DF68 /* PlaceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741267D8225CF2310069DF68 /* PlaceData.swift */; };
+		741267DB225D38250069DF68 /* CategoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741267DA225D38250069DF68 /* CategoryData.swift */; };
 		7426EC78225CD96F00CF8392 /* MapVC+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7426EC77225CD96F00CF8392 /* MapVC+Util.swift */; };
 		74827CC3225B25CC00EF5FC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74827CC2225B25CC00EF5FC0 /* AppDelegate.swift */; };
 		74827CC8225B25CC00EF5FC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74827CC6225B25CC00EF5FC0 /* Main.storyboard */; };
@@ -46,6 +48,8 @@
 /* Begin PBXFileReference section */
 		741267D0225CEA460069DF68 /* NMAKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NMAKit.framework; sourceTree = "<group>"; };
 		741267D4225CEAA50069DF68 /* NMAKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMAKit.framework; path = tg17_assignment/frameworks/NMAKit.framework; sourceTree = "<group>"; };
+		741267D8225CF2310069DF68 /* PlaceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceData.swift; sourceTree = "<group>"; };
+		741267DA225D38250069DF68 /* CategoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryData.swift; sourceTree = "<group>"; };
 		7426EC77225CD96F00CF8392 /* MapVC+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapVC+Util.swift"; sourceTree = "<group>"; };
 		74827CBF225B25CC00EF5FC0 /* tg17_assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tg17_assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74827CC2225B25CC00EF5FC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -124,8 +128,8 @@
 			isa = PBXGroup;
 			children = (
 				74D16D48225BBDD6002939F5 /* Util */,
-				74D16D33225B77ED002939F5 /* CategoriesSel */,
-				74D16D30225B4759002939F5 /* Map */,
+				74D16D33225B77ED002939F5 /* CategoriesSelVC */,
+				74D16D30225B4759002939F5 /* MapVC */,
 				74827CC6225B25CC00EF5FC0 /* Main.storyboard */,
 				74827CDA225B2E5600EF5FC0 /* HERE_constants.swift */,
 			);
@@ -142,7 +146,7 @@
 			path = res;
 			sourceTree = "<group>";
 		};
-		74D16D30225B4759002939F5 /* Map */ = {
+		74D16D30225B4759002939F5 /* MapVC */ = {
 			isa = PBXGroup;
 			children = (
 				74827CD9225B2E5600EF5FC0 /* MapVC.swift */,
@@ -152,11 +156,13 @@
 				74D16D46225BBD60002939F5 /* MapVC+NearBy.swift */,
 				74D16D2B225B46AC002939F5 /* MapVC+Position.swift */,
 				7426EC77225CD96F00CF8392 /* MapVC+Util.swift */,
+				741267D8225CF2310069DF68 /* PlaceData.swift */,
+				741267DA225D38250069DF68 /* CategoryData.swift */,
 			);
-			path = Map;
+			path = MapVC;
 			sourceTree = "<group>";
 		};
-		74D16D33225B77ED002939F5 /* CategoriesSel */ = {
+		74D16D33225B77ED002939F5 /* CategoriesSelVC */ = {
 			isa = PBXGroup;
 			children = (
 				74D16D34225B78A4002939F5 /* CategorySelectionVC.swift */,
@@ -164,7 +170,7 @@
 				74D16D36225B7C45002939F5 /* CategoryCell.swift */,
 				74D16D4B225C647F002939F5 /* CategoriesList.swift */,
 			);
-			path = CategoriesSel;
+			path = CategoriesSelVC;
 			sourceTree = "<group>";
 		};
 		74D16D48225BBDD6002939F5 /* Util */ = {
@@ -260,11 +266,13 @@
 				74D16D4C225C647F002939F5 /* CategoriesList.swift in Sources */,
 				74827CDB225B2E5600EF5FC0 /* MapVC.swift in Sources */,
 				74D16D4E225C6985002939F5 /* MapVC+MapObjects.swift in Sources */,
+				741267DB225D38250069DF68 /* CategoryData.swift in Sources */,
 				74827CC3225B25CC00EF5FC0 /* AppDelegate.swift in Sources */,
 				74D16D2C225B46AC002939F5 /* MapVC+Position.swift in Sources */,
 				74D16D37225B7C45002939F5 /* CategoryCell.swift in Sources */,
 				74D16D39225B832F002939F5 /* CategoryViewModel.swift in Sources */,
 				74827CDC225B2E5600EF5FC0 /* HERE_constants.swift in Sources */,
+				741267D9225CF2310069DF68 /* PlaceData.swift in Sources */,
 				74D16D32225B49F6002939F5 /* MapVC+Geocoder.swift in Sources */,
 				74D16D47225BBD60002939F5 /* MapVC+NearBy.swift in Sources */,
 				7426EC78225CD96F00CF8392 /* MapVC+Util.swift in Sources */,

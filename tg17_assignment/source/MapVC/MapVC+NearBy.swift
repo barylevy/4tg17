@@ -11,27 +11,17 @@ import NMAKit
 
 extension MapVC: NMAResultListener
 {
-
     func initCategories() {
         NMAPlaces.shared().refreshTopLevelCategories(completionBlock: { (categories: [NMACategory]?, error) in
-            self.categoriesList.placeCategory = categories ?? []
+            self.categoriesList.placeCategory = categories?.map({  category -> CategoryData in
+                return CategoryData(name: category.name, uniqueId: category.uniqueId )
+            }) ?? []
             if let pos = self.refPosition {
                 self.triggerSearchRequest(coordinate: pos)
             }
         })
     }
-    func triggerHereRequest(coordinate: CLLocationCoordinate2D) {
-        Helper.showIndicator(onView: self.view)
-
-        let filter = NMACategoryFilter()
-        let hereRequest = NMAPlaces.shared().makeHereRequest(location: coordinate.toGeoCoordinatesMNA(), filters: filter)
-        if let error = hereRequest?.start(listener: self) as NSError? {
-            self.showMessage("Error:here request fired with error code \(error.code)")
-            Helper.hideIndicator()
-        }
-    }
-    func triggerSearchRequest (coordinate: CLLocationCoordinate2D)
-    {
+    func triggerSearchRequest (coordinate: CLLocationCoordinate2D) {
         guard let pos = self.refPosition else { return }
         let list = self.categoriesList.includedCategories()
         guard  list.count > 0 else { return  }
@@ -61,7 +51,14 @@ extension MapVC: NMAResultListener
 
         Helper.hideIndicator()
 
-        self.resultsArray = resultPage.discoveryResults;
+        self.places = resultPage.discoveryResults.filter({ (place) -> Bool in
+            place is NMAPlaceLink
+        }).map({ (link) -> PlaceData in
+            let placeLink = link as! NMAPlaceLink
+            return PlaceData(name: placeLink.name ?? "",
+                             categoryName: placeLink.category.name,
+                             position: placeLink.position.toGeoCoordinatesCLL())
+        });
         self.clearMessage()
     }
 }

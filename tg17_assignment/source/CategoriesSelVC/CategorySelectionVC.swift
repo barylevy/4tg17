@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import NMAKit
 
 class CategorySelectionVC: UIViewController, UITableViewDataSource {
 

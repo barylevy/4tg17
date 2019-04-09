@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import NMAKit
 
 class CategoryViewModel: NSObject {
 

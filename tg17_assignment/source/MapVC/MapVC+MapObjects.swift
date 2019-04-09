@@ -8,15 +8,14 @@
 
 import Foundation
 import MapKit
-import NMAKit
 
-extension MapVC: MKMapViewDelegate{
+extension MapVC: MKMapViewDelegate {
 
-    func addMarkerAtPlace(_ placeLink: NMAPlaceLink) -> Void {
+    func addMarkerAtPlace(_ place: PlaceData) -> Void {
         let annotation = MKPointAnnotation()
-        annotation.title = placeLink.name
-        annotation.subtitle = placeLink.category.name
-        annotation.coordinate = placeLink.position.toGeoCoordinatesCLL()
+        annotation.title = place.name
+        annotation.subtitle = place.categoryName
+        annotation.coordinate = place.position
         self.mapView.addAnnotation(annotation)
         self.mapObjectsArray.append(annotation)
     }
@@ -52,10 +51,8 @@ extension MapVC: MKMapViewDelegate{
     func reloadMapObjects()  {
         cleanMap()
 
-        for link in self.resultsArray {
-            if let placeLink = link as? NMAPlaceLink {
-                self.addMarkerAtPlace(placeLink);
-            }
+        for place in self.places {
+            self.addMarkerAtPlace(place);
         }
     }
 }
