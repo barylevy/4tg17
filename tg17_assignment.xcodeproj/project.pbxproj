@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		741267D5225CEAA50069DF68 /* NMAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 741267D4225CEAA50069DF68 /* NMAKit.framework */; };
+		741267D6225CEAA50069DF68 /* NMAKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 741267D4225CEAA50069DF68 /* NMAKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7426EC78225CD96F00CF8392 /* MapVC+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7426EC77225CD96F00CF8392 /* MapVC+Util.swift */; };
 		74827CC3225B25CC00EF5FC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74827CC2225B25CC00EF5FC0 /* AppDelegate.swift */; };
 		74827CC8225B25CC00EF5FC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74827CC6225B25CC00EF5FC0 /* Main.storyboard */; };
@@ -15,8 +17,6 @@
 		74827CDB225B2E5600EF5FC0 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74827CD9225B2E5600EF5FC0 /* MapVC.swift */; };
 		74827CDC225B2E5600EF5FC0 /* HERE_constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74827CDA225B2E5600EF5FC0 /* HERE_constants.swift */; };
 		74D16D2C225B46AC002939F5 /* MapVC+Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D16D2B225B46AC002939F5 /* MapVC+Position.swift */; };
-		74D16D2D225B471E002939F5 /* NMAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74D16D24225B33B6002939F5 /* NMAKit.framework */; };
-		74D16D2E225B471E002939F5 /* NMAKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 74D16D24225B33B6002939F5 /* NMAKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		74D16D32225B49F6002939F5 /* MapVC+Geocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D16D31225B49F6002939F5 /* MapVC+Geocoder.swift */; };
 		74D16D35225B78A4002939F5 /* CategorySelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D16D34225B78A4002939F5 /* CategorySelectionVC.swift */; };
 		74D16D37225B7C45002939F5 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D16D36225B7C45002939F5 /* CategoryCell.swift */; };
@@ -30,13 +30,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		74D16D2F225B471E002939F5 /* Embed Frameworks */ = {
+		741267D7225CEAA50069DF68 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				74D16D2E225B471E002939F5 /* NMAKit.framework in Embed Frameworks */,
+				741267D6225CEAA50069DF68 /* NMAKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -44,6 +44,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		741267D0225CEA460069DF68 /* NMAKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NMAKit.framework; sourceTree = "<group>"; };
+		741267D4225CEAA50069DF68 /* NMAKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMAKit.framework; path = tg17_assignment/frameworks/NMAKit.framework; sourceTree = "<group>"; };
 		7426EC77225CD96F00CF8392 /* MapVC+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapVC+Util.swift"; sourceTree = "<group>"; };
 		74827CBF225B25CC00EF5FC0 /* tg17_assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tg17_assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74827CC2225B25CC00EF5FC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -73,16 +75,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74D16D2D225B471E002939F5 /* NMAKit.framework in Frameworks */,
+				741267D5225CEAA50069DF68 /* NMAKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		741267D3225CEA580069DF68 /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				741267D0225CEA460069DF68 /* NMAKit.framework */,
+			);
+			path = frameworks;
+			sourceTree = "<group>";
+		};
 		74827CB6225B25CC00EF5FC0 = {
 			isa = PBXGroup;
 			children = (
+				741267D4225CEAA50069DF68 /* NMAKit.framework */,
 				74827CC1225B25CC00EF5FC0 /* tg17_assignment */,
 				74827CC0225B25CC00EF5FC0 /* Products */,
 				C33FD3B3EE48F62DE9B245F1 /* Frameworks */,
@@ -100,8 +111,9 @@
 		74827CC1225B25CC00EF5FC0 /* tg17_assignment */ = {
 			isa = PBXGroup;
 			children = (
-				74827CCE225B25CC00EF5FC0 /* Info.plist */,
 				74827CC2225B25CC00EF5FC0 /* AppDelegate.swift */,
+				741267D3225CEA580069DF68 /* frameworks */,
+				74827CCE225B25CC00EF5FC0 /* Info.plist */,
 				74827CDD225B2E5E00EF5FC0 /* res */,
 				74827CD8225B2E5600EF5FC0 /* source */,
 			);
@@ -182,7 +194,7 @@
 				74827CBB225B25CC00EF5FC0 /* Sources */,
 				74827CBC225B25CC00EF5FC0 /* Frameworks */,
 				74827CBD225B25CC00EF5FC0 /* Resources */,
-				74D16D2F225B471E002939F5 /* Embed Frameworks */,
+				741267D7225CEAA50069DF68 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -410,6 +422,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/tg17_assignment/framework",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/tg17_assignment/frameworks",
 				);
 				INFOPLIST_FILE = tg17_assignment/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -433,6 +446,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/tg17_assignment/framework",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/tg17_assignment/frameworks",
 				);
 				INFOPLIST_FILE = tg17_assignment/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
