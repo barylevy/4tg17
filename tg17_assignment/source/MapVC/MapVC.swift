@@ -11,6 +11,8 @@ import MapKit
 
 class MapVC: UIViewController {
 
+    var searchProvider: SearchProviding?
+
     @IBOutlet weak var mapView: MKMapView!
 
     @IBOutlet var errorMessageLabel: UILabel!
@@ -35,15 +37,23 @@ class MapVC: UIViewController {
             self.triggerSearchRequest(coordinate: pos)
         }
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.titleTextAttributes =
                 [NSAttributedString.Key.foregroundColor: UIColor.black,
                  NSAttributedString.Key.font: UIFont(name: "Helvetica Neue", size: 15)!]
 
+        self.searchProvider = try! ClassFactory.getInstance().resolve(type: SearchProviding.self) as! SearchProviding 
+
         initMapView()
 
-        initCategories()
+        self.searchProvider?.searchCategories { (_ categories: [CategoryData]) in
+            self.categoriesList.placeCategory = categories
+            if let pos = self.refPosition {
+                self.triggerSearchRequest(coordinate: pos)
+            }
+        }
 
         self.startPositioning()
     }

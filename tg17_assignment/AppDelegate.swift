@@ -17,7 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        NMAApplicationContext.set(appId: here_credentials.appId, appCode: here_credentials.appCode)
+        GeneralInjectionInitializer.initFactoryGeneral(classFactory: ClassFactory.getInstance());
+
         return true
     }
 

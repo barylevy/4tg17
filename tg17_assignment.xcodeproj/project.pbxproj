@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		741267D5225CEAA50069DF68 /* NMAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 741267D4225CEAA50069DF68 /* NMAKit.framework */; };
-		741267D6225CEAA50069DF68 /* NMAKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 741267D4225CEAA50069DF68 /* NMAKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		741267D9225CF2310069DF68 /* PlaceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741267D8225CF2310069DF68 /* PlaceData.swift */; };
 		741267DB225D38250069DF68 /* CategoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741267DA225D38250069DF68 /* CategoryData.swift */; };
+		741267E1225FD0510069DF68 /* SearchProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741267E0225FD0510069DF68 /* SearchProviding.swift */; };
+		741267E4225FD12D0069DF68 /* ClassFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741267E3225FD12D0069DF68 /* ClassFactory.swift */; };
+		741267E6225FD15D0069DF68 /* GeneralInjectionInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741267E5225FD15D0069DF68 /* GeneralInjectionInitializer.swift */; };
+		741267E8225FD1D70069DF68 /* HereSearchProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741267E7225FD1D70069DF68 /* HereSearchProvider.swift */; };
+		741267EE226277570069DF68 /* NMAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 741267EB226277070069DF68 /* NMAKit.framework */; };
+		741267EF226277570069DF68 /* NMAKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 741267EB226277070069DF68 /* NMAKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7426EC78225CD96F00CF8392 /* MapVC+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7426EC77225CD96F00CF8392 /* MapVC+Util.swift */; };
 		74827CC3225B25CC00EF5FC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74827CC2225B25CC00EF5FC0 /* AppDelegate.swift */; };
 		74827CC8225B25CC00EF5FC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74827CC6225B25CC00EF5FC0 /* Main.storyboard */; };
@@ -38,7 +42,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				741267D6225CEAA50069DF68 /* NMAKit.framework in Embed Frameworks */,
+				741267EF226277570069DF68 /* NMAKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,9 +51,13 @@
 
 /* Begin PBXFileReference section */
 		741267D0225CEA460069DF68 /* NMAKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NMAKit.framework; sourceTree = "<group>"; };
-		741267D4225CEAA50069DF68 /* NMAKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMAKit.framework; path = tg17_assignment/frameworks/NMAKit.framework; sourceTree = "<group>"; };
 		741267D8225CF2310069DF68 /* PlaceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceData.swift; sourceTree = "<group>"; };
 		741267DA225D38250069DF68 /* CategoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryData.swift; sourceTree = "<group>"; };
+		741267E0225FD0510069DF68 /* SearchProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProviding.swift; sourceTree = "<group>"; };
+		741267E3225FD12D0069DF68 /* ClassFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassFactory.swift; sourceTree = "<group>"; };
+		741267E5225FD15D0069DF68 /* GeneralInjectionInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralInjectionInitializer.swift; sourceTree = "<group>"; };
+		741267E7225FD1D70069DF68 /* HereSearchProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HereSearchProvider.swift; sourceTree = "<group>"; };
+		741267EB226277070069DF68 /* NMAKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NMAKit.framework; sourceTree = "<group>"; };
 		7426EC77225CD96F00CF8392 /* MapVC+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapVC+Util.swift"; sourceTree = "<group>"; };
 		74827CBF225B25CC00EF5FC0 /* tg17_assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tg17_assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74827CC2225B25CC00EF5FC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,7 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				741267D5225CEAA50069DF68 /* NMAKit.framework in Frameworks */,
+				741267EE226277570069DF68 /* NMAKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,10 +102,36 @@
 			path = frameworks;
 			sourceTree = "<group>";
 		};
+		741267DF225FCFEB0069DF68 /* SearchProvider */ = {
+			isa = PBXGroup;
+			children = (
+				741267E0225FD0510069DF68 /* SearchProviding.swift */,
+				741267E7225FD1D70069DF68 /* HereSearchProvider.swift */,
+				74D16D44225BB577002939F5 /* CLLocationCoordinate2D+helper.swift */,
+			);
+			path = SearchProvider;
+			sourceTree = "<group>";
+		};
+		741267E2225FD1170069DF68 /* Initialization */ = {
+			isa = PBXGroup;
+			children = (
+				741267E3225FD12D0069DF68 /* ClassFactory.swift */,
+				741267E5225FD15D0069DF68 /* GeneralInjectionInitializer.swift */,
+			);
+			path = Initialization;
+			sourceTree = "<group>";
+		};
+		741267E9226277070069DF68 /* framework */ = {
+			isa = PBXGroup;
+			children = (
+				741267EB226277070069DF68 /* NMAKit.framework */,
+			);
+			path = framework;
+			sourceTree = "<group>";
+		};
 		74827CB6225B25CC00EF5FC0 = {
 			isa = PBXGroup;
 			children = (
-				741267D4225CEAA50069DF68 /* NMAKit.framework */,
 				74827CC1225B25CC00EF5FC0 /* tg17_assignment */,
 				74827CC0225B25CC00EF5FC0 /* Products */,
 				C33FD3B3EE48F62DE9B245F1 /* Frameworks */,
@@ -115,6 +149,7 @@
 		74827CC1225B25CC00EF5FC0 /* tg17_assignment */ = {
 			isa = PBXGroup;
 			children = (
+				741267E9226277070069DF68 /* framework */,
 				74827CC2225B25CC00EF5FC0 /* AppDelegate.swift */,
 				741267D3225CEA580069DF68 /* frameworks */,
 				74827CCE225B25CC00EF5FC0 /* Info.plist */,
@@ -127,6 +162,8 @@
 		74827CD8225B2E5600EF5FC0 /* source */ = {
 			isa = PBXGroup;
 			children = (
+				741267E2225FD1170069DF68 /* Initialization */,
+				741267DF225FCFEB0069DF68 /* SearchProvider */,
 				74D16D48225BBDD6002939F5 /* Util */,
 				74D16D33225B77ED002939F5 /* CategoriesSelVC */,
 				74D16D30225B4759002939F5 /* MapVC */,
@@ -176,7 +213,6 @@
 		74D16D48225BBDD6002939F5 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				74D16D44225BB577002939F5 /* CLLocationCoordinate2D+helper.swift */,
 				74D16D49225BBDE7002939F5 /* Helper.swift */,
 			);
 			path = Util;
@@ -266,11 +302,15 @@
 				74D16D4C225C647F002939F5 /* CategoriesList.swift in Sources */,
 				74827CDB225B2E5600EF5FC0 /* MapVC.swift in Sources */,
 				74D16D4E225C6985002939F5 /* MapVC+MapObjects.swift in Sources */,
+				741267E1225FD0510069DF68 /* SearchProviding.swift in Sources */,
+				741267E4225FD12D0069DF68 /* ClassFactory.swift in Sources */,
 				741267DB225D38250069DF68 /* CategoryData.swift in Sources */,
 				74827CC3225B25CC00EF5FC0 /* AppDelegate.swift in Sources */,
 				74D16D2C225B46AC002939F5 /* MapVC+Position.swift in Sources */,
+				741267E6225FD15D0069DF68 /* GeneralInjectionInitializer.swift in Sources */,
 				74D16D37225B7C45002939F5 /* CategoryCell.swift in Sources */,
 				74D16D39225B832F002939F5 /* CategoryViewModel.swift in Sources */,
+				741267E8225FD1D70069DF68 /* HereSearchProvider.swift in Sources */,
 				74827CDC225B2E5600EF5FC0 /* HERE_constants.swift in Sources */,
 				741267D9225CF2310069DF68 /* PlaceData.swift in Sources */,
 				74D16D32225B49F6002939F5 /* MapVC+Geocoder.swift in Sources */,
@@ -430,7 +470,6 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/tg17_assignment/framework",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/tg17_assignment/frameworks",
 				);
 				INFOPLIST_FILE = tg17_assignment/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -454,7 +493,6 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/tg17_assignment/framework",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/tg17_assignment/frameworks",
 				);
 				INFOPLIST_FILE = tg17_assignment/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

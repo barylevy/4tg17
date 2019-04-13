@@ -17,10 +17,10 @@ class CategoriesList {
             self.states[uid.uniqueId] = self.states[uid.uniqueId] ?? true
         }
     }
-    func includedCategories() -> [String]  {
+    func includedCategories() -> [CategoryData]  {
         let list = self.placeCategory.filter { (category) -> Bool in
             self.states[category.uniqueId] ?? true
-            }.map({$0.uniqueId})
+        }
 
         return list
     }

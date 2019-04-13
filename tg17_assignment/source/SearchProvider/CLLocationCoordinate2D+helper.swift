@@ -11,6 +11,22 @@ import CoreLocation
 import NMAKit
 import MapKit
 
+struct BoundingBox {
+    let tlCoord: CLLocationCoordinate2D
+    let brCoord: CLLocationCoordinate2D
+
+    init( topLeft: CLLocationCoordinate2D, bottomRight: CLLocationCoordinate2D) {
+        self.tlCoord = topLeft
+        self.brCoord = bottomRight
+    }
+}
+extension  BoundingBox {
+    func getNMAGeoBoundingBox() -> NMAGeoBoundingBox {
+        return NMAGeoBoundingBox(topLeft: self.tlCoord.toGeoCoordinatesMNA(),
+                                 bottomRight: self.brCoord.toGeoCoordinatesMNA())
+    }
+}
+
 extension CLLocationCoordinate2D {
 
     func toGeoCoordinatesMNA() -> NMAGeoCoordinates {
@@ -23,7 +39,7 @@ extension NMAGeoCoordinates {
     }
 }
 extension MKMapView {
-    func boundingBox() -> NMAGeoBoundingBox {
+    func boundingBox() -> BoundingBox {
 
         let tlPoint = CGPoint(x: bounds.origin.x , y: bounds.origin.y)
         let brPoint = CGPoint(x: (bounds.origin.x + bounds.size.width), y: bounds.origin.y + bounds.size.height)
@@ -32,7 +48,7 @@ extension MKMapView {
         let tlCoord = self.convert(tlPoint, toCoordinateFrom: self)
         let brCoord = self.convert(brPoint, toCoordinateFrom: self)
 
-        let box = NMAGeoBoundingBox(topLeft: tlCoord.toGeoCoordinatesMNA(), bottomRight: brCoord.toGeoCoordinatesMNA())
+        let box = BoundingBox(topLeft: tlCoord, bottomRight: brCoord)
         return box
     }
 }
