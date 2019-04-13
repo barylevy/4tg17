@@ -15,31 +15,16 @@ extension MapVC {
 
         self.title = "calculating..."
 
-        NMAGeocoder.shared().makeReverseGeocodeRequest(geoCoordinates: position.toGeoCoordinatesMNA()).start
-            { [weak self] (request: NMARequest?, data: Any?, error: Error?) in
+        self.geocoderProvider?.reverseGeocode(position, completion: { [weak self] (address, error) in
             guard let self = self else {
                 return
             }
-
-            guard error == nil else {
-                print("error \(error!.localizedDescription)")
+            guard error == nil else{
+                self.showMessage( error.debugDescription)
                 return
             }
+            self.title = address
+        })
 
-            guard (request is NMAReverseGeocodeRequest) else {
-                print("invalid type returned")
-                self.showMessage( "error invalid type returned")
-                return
-            }
-
-            guard let arr = data as? NSArray, arr.count > 0 else {
-                return
-            }
-
-            if let result = arr[0] as? NMAReverseGeocodeResult,
-                let address = result.location?.address.formattedAddress {
-                self.title = address
-            }
-        }
     }
 }

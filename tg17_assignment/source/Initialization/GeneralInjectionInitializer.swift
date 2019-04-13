@@ -14,5 +14,6 @@ class GeneralInjectionInitializer: NSObject {
 
         classFactory.register(type: SearchProviding.self, impl: HereSearchProvider())
 
+        classFactory.register(type: LocationGeocoding.self, impl: LocationGeocoder())
     }
 }

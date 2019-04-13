@@ -13,6 +13,8 @@ class MapVC: UIViewController {
 
     var searchProvider: SearchProviding?
 
+    var geocoderProvider: LocationGeocoding?
+
     @IBOutlet weak var mapView: MKMapView!
 
     @IBOutlet var errorMessageLabel: UILabel!
@@ -45,7 +47,8 @@ class MapVC: UIViewController {
                  NSAttributedString.Key.font: UIFont(name: "Helvetica Neue", size: 15)!]
 
         self.searchProvider = try! ClassFactory.getInstance().resolve(type: SearchProviding.self) as! SearchProviding 
-
+        self.geocoderProvider = try! ClassFactory.getInstance().resolve(type: LocationGeocoding.self) as! LocationGeocoding
+        
         initMapView()
 
         self.searchProvider?.searchCategories { (_ categories: [CategoryData]) in

@@ -16,6 +16,8 @@
 		741267EE226277570069DF68 /* NMAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 741267EB226277070069DF68 /* NMAKit.framework */; };
 		741267EF226277570069DF68 /* NMAKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 741267EB226277070069DF68 /* NMAKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		741267F62262963E0069DF68 /* BoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741267F52262963E0069DF68 /* BoundingBox.swift */; };
+		741267FC22629B380069DF68 /* LocationGeocoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741267FB22629B380069DF68 /* LocationGeocoding.swift */; };
+		741267FE22629B4D0069DF68 /* LocationGeocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741267FD22629B4D0069DF68 /* LocationGeocoder.swift */; };
 		7426EC78225CD96F00CF8392 /* MapVC+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7426EC77225CD96F00CF8392 /* MapVC+Util.swift */; };
 		74827CC3225B25CC00EF5FC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74827CC2225B25CC00EF5FC0 /* AppDelegate.swift */; };
 		74827CC8225B25CC00EF5FC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74827CC6225B25CC00EF5FC0 /* Main.storyboard */; };
@@ -51,7 +53,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		741267D0225CEA460069DF68 /* NMAKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NMAKit.framework; sourceTree = "<group>"; };
 		741267D8225CF2310069DF68 /* PlaceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceData.swift; sourceTree = "<group>"; };
 		741267DA225D38250069DF68 /* CategoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryData.swift; sourceTree = "<group>"; };
 		741267E0225FD0510069DF68 /* SearchProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProviding.swift; sourceTree = "<group>"; };
@@ -60,6 +61,8 @@
 		741267E7225FD1D70069DF68 /* HereSearchProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HereSearchProvider.swift; sourceTree = "<group>"; };
 		741267EB226277070069DF68 /* NMAKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NMAKit.framework; sourceTree = "<group>"; };
 		741267F52262963E0069DF68 /* BoundingBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoundingBox.swift; sourceTree = "<group>"; };
+		741267FB22629B380069DF68 /* LocationGeocoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationGeocoding.swift; sourceTree = "<group>"; };
+		741267FD22629B4D0069DF68 /* LocationGeocoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationGeocoder.swift; sourceTree = "<group>"; };
 		7426EC77225CD96F00CF8392 /* MapVC+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapVC+Util.swift"; sourceTree = "<group>"; };
 		74827CBF225B25CC00EF5FC0 /* tg17_assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tg17_assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74827CC2225B25CC00EF5FC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,14 +99,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		741267D3225CEA580069DF68 /* frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				741267D0225CEA460069DF68 /* NMAKit.framework */,
-			);
-			path = frameworks;
-			sourceTree = "<group>";
-		};
 		741267DF225FCFEB0069DF68 /* SearchProvider */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +125,15 @@
 			path = framework;
 			sourceTree = "<group>";
 		};
+		741267FA22629B260069DF68 /* Geocoder */ = {
+			isa = PBXGroup;
+			children = (
+				741267FB22629B380069DF68 /* LocationGeocoding.swift */,
+				741267FD22629B4D0069DF68 /* LocationGeocoder.swift */,
+			);
+			path = Geocoder;
+			sourceTree = "<group>";
+		};
 		74827CB6225B25CC00EF5FC0 = {
 			isa = PBXGroup;
 			children = (
@@ -152,7 +156,6 @@
 			children = (
 				741267E9226277070069DF68 /* framework */,
 				74827CC2225B25CC00EF5FC0 /* AppDelegate.swift */,
-				741267D3225CEA580069DF68 /* frameworks */,
 				74827CCE225B25CC00EF5FC0 /* Info.plist */,
 				74827CDD225B2E5E00EF5FC0 /* res */,
 				74827CD8225B2E5600EF5FC0 /* source */,
@@ -163,6 +166,7 @@
 		74827CD8225B2E5600EF5FC0 /* source */ = {
 			isa = PBXGroup;
 			children = (
+				741267FA22629B260069DF68 /* Geocoder */,
 				741267E2225FD1170069DF68 /* Initialization */,
 				741267DF225FCFEB0069DF68 /* SearchProvider */,
 				74D16D48225BBDD6002939F5 /* Util */,
@@ -303,6 +307,7 @@
 			files = (
 				74D16D45225BB577002939F5 /* MKMapView+BoundingBox.swift in Sources */,
 				74D16D4C225C647F002939F5 /* CategoriesList.swift in Sources */,
+				741267FE22629B4D0069DF68 /* LocationGeocoder.swift in Sources */,
 				74827CDB225B2E5600EF5FC0 /* MapVC.swift in Sources */,
 				741267F62262963E0069DF68 /* BoundingBox.swift in Sources */,
 				74D16D4E225C6985002939F5 /* MapVC+MapObjects.swift in Sources */,
@@ -321,6 +326,7 @@
 				74D16D47225BBD60002939F5 /* MapVC+NearBy.swift in Sources */,
 				7426EC78225CD96F00CF8392 /* MapVC+Util.swift in Sources */,
 				74D16D35225B78A4002939F5 /* CategorySelectionVC.swift in Sources */,
+				741267FC22629B380069DF68 /* LocationGeocoding.swift in Sources */,
 				74D16D4A225BBDE7002939F5 /* Helper.swift in Sources */,
 				74D16D3D225B90F2002939F5 /* MapVC+Actions.swift in Sources */,
 			);
