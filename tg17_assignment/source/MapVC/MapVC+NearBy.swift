@@ -7,11 +7,11 @@
 //
 
 import Foundation
-import NMAKit
+import MapKit
 
 extension MapVC
 {
-    func triggerSearchRequest (coordinate: CLLocationCoordinate2D) {
+    func searchPlace (coordinate: CLLocationCoordinate2D) {
         guard let pos = self.refPosition else { return }
         let list = self.categoriesList.includedCategories()
         guard  list.count > 0 else { return  }

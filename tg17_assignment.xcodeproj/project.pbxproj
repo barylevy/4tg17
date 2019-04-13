@@ -15,6 +15,7 @@
 		741267E8225FD1D70069DF68 /* HereSearchProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741267E7225FD1D70069DF68 /* HereSearchProvider.swift */; };
 		741267EE226277570069DF68 /* NMAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 741267EB226277070069DF68 /* NMAKit.framework */; };
 		741267EF226277570069DF68 /* NMAKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 741267EB226277070069DF68 /* NMAKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		741267F62262963E0069DF68 /* BoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741267F52262963E0069DF68 /* BoundingBox.swift */; };
 		7426EC78225CD96F00CF8392 /* MapVC+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7426EC77225CD96F00CF8392 /* MapVC+Util.swift */; };
 		74827CC3225B25CC00EF5FC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74827CC2225B25CC00EF5FC0 /* AppDelegate.swift */; };
 		74827CC8225B25CC00EF5FC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74827CC6225B25CC00EF5FC0 /* Main.storyboard */; };
@@ -28,7 +29,7 @@
 		74D16D37225B7C45002939F5 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D16D36225B7C45002939F5 /* CategoryCell.swift */; };
 		74D16D39225B832F002939F5 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D16D38225B832F002939F5 /* CategoryViewModel.swift */; };
 		74D16D3D225B90F2002939F5 /* MapVC+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D16D3C225B90F2002939F5 /* MapVC+Actions.swift */; };
-		74D16D45225BB577002939F5 /* CLLocationCoordinate2D+helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D16D44225BB577002939F5 /* CLLocationCoordinate2D+helper.swift */; };
+		74D16D45225BB577002939F5 /* MKMapView+BoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D16D44225BB577002939F5 /* MKMapView+BoundingBox.swift */; };
 		74D16D47225BBD60002939F5 /* MapVC+NearBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D16D46225BBD60002939F5 /* MapVC+NearBy.swift */; };
 		74D16D4A225BBDE7002939F5 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D16D49225BBDE7002939F5 /* Helper.swift */; };
 		74D16D4C225C647F002939F5 /* CategoriesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D16D4B225C647F002939F5 /* CategoriesList.swift */; };
@@ -58,6 +59,7 @@
 		741267E5225FD15D0069DF68 /* GeneralInjectionInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralInjectionInitializer.swift; sourceTree = "<group>"; };
 		741267E7225FD1D70069DF68 /* HereSearchProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HereSearchProvider.swift; sourceTree = "<group>"; };
 		741267EB226277070069DF68 /* NMAKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NMAKit.framework; sourceTree = "<group>"; };
+		741267F52262963E0069DF68 /* BoundingBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoundingBox.swift; sourceTree = "<group>"; };
 		7426EC77225CD96F00CF8392 /* MapVC+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapVC+Util.swift"; sourceTree = "<group>"; };
 		74827CBF225B25CC00EF5FC0 /* tg17_assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tg17_assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74827CC2225B25CC00EF5FC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,7 +77,7 @@
 		74D16D36225B7C45002939F5 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		74D16D38225B832F002939F5 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		74D16D3C225B90F2002939F5 /* MapVC+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapVC+Actions.swift"; sourceTree = "<group>"; };
-		74D16D44225BB577002939F5 /* CLLocationCoordinate2D+helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+helper.swift"; sourceTree = "<group>"; };
+		74D16D44225BB577002939F5 /* MKMapView+BoundingBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+BoundingBox.swift"; sourceTree = "<group>"; };
 		74D16D46225BBD60002939F5 /* MapVC+NearBy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapVC+NearBy.swift"; sourceTree = "<group>"; };
 		74D16D49225BBDE7002939F5 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		74D16D4B225C647F002939F5 /* CategoriesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesList.swift; sourceTree = "<group>"; };
@@ -107,7 +109,6 @@
 			children = (
 				741267E0225FD0510069DF68 /* SearchProviding.swift */,
 				741267E7225FD1D70069DF68 /* HereSearchProvider.swift */,
-				74D16D44225BB577002939F5 /* CLLocationCoordinate2D+helper.swift */,
 			);
 			path = SearchProvider;
 			sourceTree = "<group>";
@@ -213,7 +214,9 @@
 		74D16D48225BBDD6002939F5 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				74D16D44225BB577002939F5 /* MKMapView+BoundingBox.swift */,
 				74D16D49225BBDE7002939F5 /* Helper.swift */,
+				741267F52262963E0069DF68 /* BoundingBox.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -298,9 +301,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74D16D45225BB577002939F5 /* CLLocationCoordinate2D+helper.swift in Sources */,
+				74D16D45225BB577002939F5 /* MKMapView+BoundingBox.swift in Sources */,
 				74D16D4C225C647F002939F5 /* CategoriesList.swift in Sources */,
 				74827CDB225B2E5600EF5FC0 /* MapVC.swift in Sources */,
+				741267F62262963E0069DF68 /* BoundingBox.swift in Sources */,
 				74D16D4E225C6985002939F5 /* MapVC+MapObjects.swift in Sources */,
 				741267E1225FD0510069DF68 /* SearchProviding.swift in Sources */,
 				741267E4225FD12D0069DF68 /* ClassFactory.swift in Sources */,

@@ -27,14 +27,14 @@ class MapVC: UIViewController {
         didSet {
             guard let pos = refPosition else { return }
             self.reverseGeocode(pos)
-            self.triggerSearchRequest(coordinate: pos)
+            self.searchPlace(coordinate: pos)
         }
     }
     var categoriesList = CategoriesList() {
         didSet{
             guard let pos = self.refPosition else { return }
             self.cleanMap()
-            self.triggerSearchRequest(coordinate: pos)
+            self.searchPlace(coordinate: pos)
         }
     }
 
@@ -51,7 +51,7 @@ class MapVC: UIViewController {
         self.searchProvider?.searchCategories { (_ categories: [CategoryData]) in
             self.categoriesList.placeCategory = categories
             if let pos = self.refPosition {
-                self.triggerSearchRequest(coordinate: pos)
+                self.searchPlace(coordinate: pos)
             }
         }
 

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import NMAKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

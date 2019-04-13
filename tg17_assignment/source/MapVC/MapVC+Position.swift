@@ -10,6 +10,18 @@ import UIKit
 import MapKit
 import NMAKit
 
+extension CLLocationCoordinate2D {
+
+    func toGeoCoordinatesMNA() -> NMAGeoCoordinates {
+        return NMAGeoCoordinates(latitude: self.latitude, longitude: self.longitude)
+    }
+}
+extension NMAGeoCoordinates {
+    func toGeoCoordinatesCLL() -> CLLocationCoordinate2D {
+        return CLLocationCoordinate2D(latitude: self.latitude, longitude: self.longitude)
+    }
+}
+
 extension MapVC {
     func startPositioning() {
         NMAPositioningManager.shared().startPositioning()

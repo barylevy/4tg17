@@ -10,7 +10,7 @@ import UIKit
 
 extension MapVC {
     func showMessage(_ message: String) {
-        self.errorMessageLabel.text = message
+//        self.errorMessageLabel.text = message
     }
     func clearMessage() {
         self.errorMessageLabel.text = ""

@@ -9,6 +9,13 @@
 import Foundation
 import NMAKit
 
+extension  BoundingBox {
+    func getNMAGeoBoundingBox() -> NMAGeoBoundingBox {
+        return NMAGeoBoundingBox(topLeft: self.tlCoord.toGeoCoordinatesMNA(),
+                                 bottomRight: self.brCoord.toGeoCoordinatesMNA())
+    }
+}
+
 class HereSearchProvider: SearchProviding {
 
     init() {
